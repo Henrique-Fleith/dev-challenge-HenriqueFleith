@@ -101,7 +101,6 @@ import axios from 'axios'
 const query = ref('')
 const results = ref<Array<any>>([])
 
-// nomes bonitos por tipo
 const typeLabels: Record<string, string> = {
   salesOrder: 'Pedidos de Venda',
   purchaseOrder: 'Pedidos de Compra',
@@ -148,7 +147,6 @@ function getName(item: any) {
          ''
 }
 
-// vê se tem algo além do básico
 function hasDetails(item: any, type: string) {
   const keys = Object.keys(item)
   const minimal = minimalKeys[type] ?? []

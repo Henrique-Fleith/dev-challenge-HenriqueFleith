@@ -3,10 +3,8 @@ import path from "path";
 
 type GenericObject = Record<string, unknown>;
 
-/*
-função que lê o JSON, monta o caminho
-e transforma o conteúdo em objeto JavaScript
-*/
+
+//função que lê o JSON, monta o caminho e transforma o conteúdo em objeto JavaScript
 
 function readJsonFile(fileName: string) {
   try {
@@ -27,10 +25,9 @@ function readJsonFile(fileName: string) {
   }
 }
 
-/*
-função que recebe os arrays dos objetos e filtra
-aqueles que têm o termo buscado
-*/
+
+//função que recebe os arrays dos objetos e filtra aqueles que têm o termo buscado
+
 function filterData(data: GenericObject[], searchTerm: string): GenericObject[] {
   return data.filter((item: GenericObject) =>
     Object.values(item).some((value) =>
@@ -39,9 +36,8 @@ function filterData(data: GenericObject[], searchTerm: string): GenericObject[] 
   );
 }
 
-/*
-função principal que executa a busca geral
-*/
+//função principal que executa a busca geral
+
 export function searchAll(query: string) {
   const searchTerm = query.toLowerCase();
 
